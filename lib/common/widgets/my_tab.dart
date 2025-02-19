@@ -13,13 +13,14 @@ class MyTab extends StatefulWidget {
 }
 
 class _MyTabState extends State<MyTab> with TickerProviderStateMixin {
-  late TabController tabController = TabController(length: 2, vsync: this);
+  static const int tabCount = 2;
+  late TabController tabController;
   int currentIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 2, vsync: this);
+    tabController = TabController(length: tabCount, vsync: this);
     tabController.addListener(tabListener);
   }
 
