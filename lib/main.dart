@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:school_comma/presentaion/user/login_screen.dart';
+import 'package:school_comma/presentation/user/login_screen.dart';
 
 void main() {
   runApp(const Main());

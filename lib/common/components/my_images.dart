@@ -7,4 +7,5 @@ class MyImages {
   static const String coloredPerson = "assets/images/unperson.png";
   static const String sun = "assets/images/sun.png";
   static const String back = "assets/images/back.png";
+  static const String dot = "assets/images/do.png";
 }
