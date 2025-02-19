@@ -3,8 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_comma/common/components/custom_text_form_field.dart';
 import 'package:school_comma/common/layout/default_layout.dart';
 import 'package:school_comma/common/widgets/my_tab.dart';
-import 'package:school_comma/main.dart';
-import 'package:school_comma/presentaion/user/sign_up_screen.dart';
+import 'package:school_comma/presentation/user/sign_up_screen.dart';
 
 import '../../common/components/my_colors.dart';
 

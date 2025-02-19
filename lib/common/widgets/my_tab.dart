@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_comma/common/components/my_images.dart';
 import 'package:school_comma/common/layout/default_layout.dart';
-import 'package:school_comma/presentaion/main/main_screen.dart';
+
+import '../../presentation/main/main_screen.dart';
 
 class MyTab extends StatefulWidget {
   const MyTab({super.key});
