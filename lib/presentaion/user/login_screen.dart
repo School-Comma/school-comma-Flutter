@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_comma/common/components/custom_text_form_field.dart';
 import 'package:school_comma/common/layout/default_layout.dart';
+import 'package:school_comma/common/widgets/my_tab.dart';
 import 'package:school_comma/main.dart';
 import 'package:school_comma/presentaion/user/sign_up_screen.dart';
 
@@ -49,7 +50,13 @@ class LoginScreen extends StatelessWidget {
               height: 400.h,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const MyTab(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 minimumSize: Size(360.w, 62.h),
                 backgroundColor: MyColors.yellow3,
@@ -78,7 +85,9 @@ class LoginScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const SignUpScreen(),),
+                      MaterialPageRoute(
+                        builder: (_) => const SignUpScreen(),
+                      ),
                     );
                   },
                   child: Text(

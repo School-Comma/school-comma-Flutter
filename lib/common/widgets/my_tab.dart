@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_comma/common/components/my_images.dart';
 import 'package:school_comma/common/layout/default_layout.dart';
+import 'package:school_comma/presentaion/main/main_screen.dart';
 
 class MyTab extends StatefulWidget {
   const MyTab({super.key});
@@ -38,21 +39,28 @@ class _MyTabState extends State<MyTab> with TickerProviderStateMixin {
     return DefaultLayout(
       body: TabBarView(
         controller: tabController,
-        children: [],
+        children: const <Widget>[
+          MainScreen(),
+          Center(child: Text('mypage'),),
+        ],
       ),
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         currentIndex: currentIndex,
+        onTap: (int index) {
+          tabController.animateTo(index);
+        },
         items: [
           BottomNavigationBarItem(
             icon: currentIndex == 0
                 ? Image.asset(
-                    MyImages.home,
+                    MyImages.coloredHome,
                     width: 32.w,
                     height: 32.h,
                   )
                 : Image.asset(
-                    MyImages.coloredHome,
+                    MyImages.home,
                     width: 32.w,
                     height: 32.h,
                   ),
@@ -61,12 +69,12 @@ class _MyTabState extends State<MyTab> with TickerProviderStateMixin {
           BottomNavigationBarItem(
             icon: currentIndex == 1
                 ? Image.asset(
-                    MyImages.person,
+                    MyImages.coloredPerson,
                     width: 32.w,
                     height: 32.h,
                   )
                 : Image.asset(
-                    MyImages.coloredPerson,
+                    MyImages.person,
                     width: 32.w,
                     height: 32.h,
                   ),
