@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_comma/common/components/my_images.dart';
 import 'package:school_comma/common/layout/default_layout.dart';
+import 'package:school_comma/presentation/mypage/my_page_screen.dart';
 
 import '../../presentation/main/main_screen.dart';
 
@@ -40,10 +41,11 @@ class _MyTabState extends State<MyTab> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return DefaultLayout(
       body: TabBarView(
+        physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
         children: const <Widget>[
           MainScreen(),
-          Center(child: Text('mypage'),),
+          MyPageScreen(),
         ],
       ),
       backgroundColor: Colors.white,
